@@ -7,6 +7,17 @@
          Salim's Github Page
    </title> 
    <link rel="stylesheet" type="text/css" href = "all.css" />
+   <body onload="welcomeFunction(); document.body.style.backgroundColor='pink'"
+	 onresize="document.body.style.backgroundColor='lightblue'"
+	 
+	 onkeydown="document.body.style.backgroundColor='white'"
+	 onkeyup="document.body.style.backgroundColor='lightyellow'">
+	   
+   <script>
+	   function welcomeFunction(){
+		   alert("Welcome!");
+	   }
+    </script>
    <!-- This is a comment line -->
    <!--
    <style type="text/css">
@@ -31,7 +42,7 @@
  <body>
   <stong> Intro 2 Inf Sys </strong>
   </p> 
-<p class = "centered"> 
+<p class = "centered" onmouseover="document.querySelector('.centered').style.font ='bold 20pt arial,serif'"> 
 	<em> Salim Beyden
 	      <br>
               150200307
@@ -42,7 +53,7 @@
      Evolution of Homo Sapiens
   </p>
 
-  <ul> 
+  <ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'"> 
       <li> Homo habilis </li>
       <li> Homo erectus </li>
       <li> Homo neanderthalensis </li>
@@ -51,8 +62,10 @@
       <ul>
            <li> Homo Disconnectus </li>
       </ul>  
-
-      <h1> <strong> Human Evolution </strong> </h1>
+   </ul>
+      <h1 onmouseover="style.color='orange';style.backgroundColor='lightgreen'"
+	  onmouseout="style.color='red'; style.backgroundColor='white'"> 
+	      <strong> Human Evolution </strong> </h1>
 
       <p> <img src="evolution-diagram.png"> </p>
      
@@ -65,7 +78,7 @@
        <h2> <strong> The Clicklabke Image </strong> </h2>
        <p> This image is clickable, click on it and try. 
            <a href=" https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-              <img src="evolution-diagram.png">     
+              <img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)" src="evolution-diagram.png"/>     
            </a>
        </p>
     
